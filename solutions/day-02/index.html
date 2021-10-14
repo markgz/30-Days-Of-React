@@ -13,13 +13,40 @@
         <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <script type="text/babel">
             const rootElement = document.querySelector('.root')
-            const header = (<header>
-                <h1>Hello World</h1>
-                <h2>Welcome to React world</h2>
-                <h3>This is h3 element</h3>
-                <h4>This is markgz from China</h4>
-            </header>)
-            ReactDOM.render(header, rootElement)
+            const header = (
+                <header>
+                    <h1>Hello World</h1>
+                    <h2>Welcome to React world</h2>
+                    <h3>This is h3 element</h3>
+                    <h4>This is markgz from China</h4>
+                </header>)
+
+            const main = (
+                <main>
+                    <p> Prerequist to get started react.js</p>
+                    <ul>
+                        <li>Hello</li>
+                        <li>World</li>
+                        <li>Item3</li>
+                        <li>Item4</li>
+                    </ul>
+                </main>
+            )
+
+            const footer = (
+                <footer>
+                    <p>Copyright 2021</p>
+                </footer>
+            )
+
+            const app = (
+                <div>
+                    {header}
+                    {main}
+                    {footer}    
+                </div>
+            )
+            ReactDOM.render(app, rootElement)
         </script>
     </body>
 </html>
