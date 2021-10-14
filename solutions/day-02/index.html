@@ -94,25 +94,47 @@
             const footerStyle = {
                 backgroundColor: '#61DBFB'
             }
+            const welcome = 'Welcome to react.js tutorials'
+            const hello = 'hello'
+            const exercise = 'exercise'
+            const author = {
+                firstName: 'markgz',
+                lastName: 'yan'
+            }
             const header = (
                 <header
                     className='header-wrapper'
                 >
-                    <h1>Hello World</h1>
-                    <h2>Welcome to React world</h2>
-                    <h3>This is h3 element</h3>
+                    <h1>{welcome}</h1>
+                    <h2>{hello}</h2>
+                    <h3>{exercise}</h3>
                     <h4>This is markgz from China</h4>
+                    <p>
+                        Instructor: {author.firstName} {author.lastName}    
+                    </p>
                 </header>)
 
-            
+            const numTwo = 2
+            const numOne = 1
+            const result = (
+                <p>
+                    {numOne} + {numTwo} = {numOne + numTwo}
+                </p>
+            )
+
+            const techs = ['html', 'css', 'javascript', 'java']
+            const techsFormatted = techs.map((tech) => <li>{tech}</li>)
             const main = (
                 <main className='main-wrapper'>
-                    <p> Prerequist to get started react.js</p>
+                    <p>
+                    Prerequisite to get started{' '}
+                    <strong>
+                    <em>react.js</em>
+                    </strong>
+                    :
+                    </p>
                     <ul>
-                        <li>Hello</li>
-                        <li>World</li>
-                        <li>Item3</li>
-                        <li>Item4</li>
+                        {techsFormatted}
                     </ul>
                 </main>
             )
