@@ -4,6 +4,73 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width:device-width, initial-scale=1.0" />
         <title>30 days of React</title>
+        <style>
+            /* General style */
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            html,
+            body {
+                height: 100%;
+                line-height: 1.5;
+                font-family: 'Montserrat';
+                font-weight: 300;
+                color: black;
+            }
+            .root {
+                min-height: 100%;
+                position: relative;
+            }
+            .header-wrapper,
+            .main-wrapper,
+            .footer-wrapper {
+                width: 85%;
+                margin: auto;
+            }
+            .header-wrapper,
+            .main-wrapper {
+                padding: 10px;
+                margin: 2px auto;
+            }
+            h1 {
+                font-size: 70px;
+                font-weight: 300;
+            }
+            h2,
+            h3 {
+                font-weight: 300;
+            }
+            header {
+                background-color: #61dbfb;
+                padding: 10px;
+            }
+            main {
+                padding: 10px;
+                padding-bottom: 60px;
+            }
+
+            ul {
+                margin-left: 15px;
+            }
+            ul li {
+                list-style: none;
+            }
+
+            footer {
+                position: abosolute;
+                bottom: 0;
+                width: 100%;
+                height: 60px;
+                background: #6cf;
+            }
+            .footer-wrapper {
+                font-weight: 400;
+                text-align: center;
+                line-height: 60px;
+            }
+        </style>
     </head>
     <body>
         <div class="root"></div>
@@ -29,7 +96,7 @@
             }
             const header = (
                 <header
-                    style={headerStyle}
+                    className='header-wrapper'
                 >
                     <h1>Hello World</h1>
                     <h2>Welcome to React world</h2>
@@ -39,7 +106,7 @@
 
             
             const main = (
-                <main style={mainStyle}>
+                <main className='main-wrapper'>
                     <p> Prerequist to get started react.js</p>
                     <ul>
                         <li>Hello</li>
@@ -51,13 +118,13 @@
             )
 
             const footer = (
-                <footer style={footerStyle}>
+                <footer className='footer-wrapper'>
                     <p>Copyright 2021</p>
                 </footer>
             )
 
             const app = (
-                <div>
+                <div className='app'>
                     {header}
                     {main}
                     {footer}    
