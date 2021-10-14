@@ -13,16 +13,33 @@
         <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <script type="text/babel">
             const rootElement = document.querySelector('.root')
+            const headerStyle = {
+                backgroundColor: '#61DBFB',
+                fontFamily: 'Helvetica Neue',
+                padding: 25,
+                lineHeight: 1.5
+             }
+
+            const mainStyle = {
+                backgroundColor: '#F3F0F5'
+            }
+
+            const footerStyle = {
+                backgroundColor: '#61DBFB'
+            }
             const header = (
-                <header>
+                <header
+                    style={headerStyle}
+                >
                     <h1>Hello World</h1>
                     <h2>Welcome to React world</h2>
                     <h3>This is h3 element</h3>
                     <h4>This is markgz from China</h4>
                 </header>)
 
+            
             const main = (
-                <main>
+                <main style={mainStyle}>
                     <p> Prerequist to get started react.js</p>
                     <ul>
                         <li>Hello</li>
@@ -34,7 +51,7 @@
             )
 
             const footer = (
-                <footer>
+                <footer style={footerStyle}>
                     <p>Copyright 2021</p>
                 </footer>
             )
