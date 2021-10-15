@@ -10,7 +10,7 @@ const headerStyle = {
 }
 
 const header = (
-  <header style={headerStyle}>
+  <header className='header-wrapper'>
     <h1>Welcome to 30 Days of React</h1>
     <h2>This is day 3 exercises</h2>
     <h3>markgz</h3>
@@ -22,7 +22,7 @@ const mainStyle = {
   backgroundColor: '#F3F0F5'
 }
 const main = (
-  <main style={mainStyle}>
+  <main className='main-wrapper'>
     <p>Prerequisite to get started react.js</p>
     <ul>
       <li>css</li>
@@ -37,7 +37,7 @@ const footerStyle = {
   backgroundColor: '#61DBFB'
 }
 const footer = (
-  <footer style={footerStyle}>
+  <footer className='footer-wrapper'>
     <p>
       copyright 2021
     </p>
