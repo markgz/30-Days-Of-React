@@ -1,61 +1,56 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import asabenchImage from './images/asabench.png'
 
-
-const welcome = 'Welcome to 30 Days of React'
-const title = 'Getting Started React'
-const subtitle = 'JavaScript Library'
+const welcome = '感冒清胶囊'
+const title = "疏风解表"
+const subtitle = '清热解毒'
 const author = {
   firstName: 'markgz',
   lastName: 'yan'
 }
-const date = 'Oct 15, 2021'
 
-const rootElement = document.getElementById('root')
-const headerStyle = {
-  backgroundColor: '#61DBFB',
-  fontFamily: 'Helvetica Neue',
-  padding: 25,
-  lineHeight: 1.5,
-}
+const user = (
+  <div>
+    <img src={asabenchImage} alt='asabench image'/>
+  </div>
+)
 
 const header = (
-  <header className='header-wrapper'>
+  <header>
     <h1>{welcome}</h1>
     <h2>{title}</h2>
-    <p>{subtitle}</p>
-    <h3>{author.firstName}</h3>
-    <h4>{author.lastName}</h4>
-    <small>{date}</small>
+    <h3>{subtitle}</h3>
+    <p>
+      firstName: {author.firstName}
+      lastName: {author.lastName}
+    </p>
   </header>
 )
 
-const mainStyle = {
-  backgroundColor: '#F3F0F5'
-}
-const techs = ['css', 'html', 'javascript', 'python', 'swift']
+// JSX element, main
+const techs = ['HTML', 'CSS', 'JavaScript']
 const techsFormatted = techs.map((tech) => <li>{tech}</li>)
 
 const main = (
-  <main className='main-wrapper'>
-    <p>Prerequisite to get started react.js</p>
-    <ul>
-      {techsFormatted}
-    </ul>
+  <main>
+    <div className='main-wrapper'>
+      <ul>
+        {techsFormatted}
+      </ul>
+      {user}
+    </div>
   </main>
 )
 
-const footerStyle = {
-  backgroundColor: '#61DBFB'
-}
+const copyRight = 'CopyRight 2021'
 const footer = (
-  <footer className='footer-wrapper'>
-    <p>
-      copyright 2021
-    </p>
+  <footer>
+    <div className="footer-wrapper">
+      <p>{copyRight}</p>
+    </div>
   </footer>
 )
-
 const app = (
   <div>
     {header}
@@ -63,4 +58,6 @@ const app = (
     {footer}
   </div>
 )
+const rootElement = document.getElementById('root')
+
 ReactDOM.render(app, rootElement)
