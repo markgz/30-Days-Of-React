@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import asabenehImage from './images/asabench.png'
 
 const firstName = "markgz"
 const lastName = "yan"
@@ -17,5 +18,30 @@ const Header = () => {
     )
 }
 
+const UserCard = () => {
+    return (
+        <div>
+            <img src={asabenehImage} alt='asabeneh image' />
+            <h2>Asabeneh Yetayeh</h2>
+        </div>
+    )
+}
+
+const TechList = () => {
+    const techs = ['html', 'css', 'javascript']
+    const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>)
+    return techsFormatted
+}
+
+const App = () => {
+    return (
+        <div>
+            <Header />
+            <UserCard />
+            <TechList />
+        </div>
+    )
+}
+
 const rootElement = document.getElementById('root')
-ReactDOM.render(<Header />, rootElement)
+ReactDOM.render(<App />, rootElement)
