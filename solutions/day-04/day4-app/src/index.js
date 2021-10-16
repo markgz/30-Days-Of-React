@@ -29,6 +29,24 @@ const TechList = () => {
     return techsFormatted
 }
 
+const hexaColor = () => {
+    const str = '0123456789abcdef'
+
+    let color = 0
+    for (let i = 0; i < 6; i++) {
+        let random = Math.random()
+        console.log(`random: ${random}`)
+        let index = Math.floor(random * str.length)
+        color += str[index]
+    }
+    return '#' + color
+}
+
+const HexaColor = () => (
+    <div>{hexaColor()}</div>
+)
+
+
 const Main = () => (
     <main>
         <div className='main-wrapper'>
@@ -37,6 +55,7 @@ const Main = () => (
                 <TechList />
             </ul>
             <UserCard />
+            <HexaColor />
         </div>
     </main>
 )
