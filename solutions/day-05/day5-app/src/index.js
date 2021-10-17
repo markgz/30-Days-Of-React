@@ -6,11 +6,11 @@ const Header = (props) => {
   console.log('props', props)
   return (
     <header>
-      <h1>{props.firstName}</h1>
-      <h2>{props.lastName}</h2>
-      <h3>{props.country}</h3>
-      <p>{props.title}</p>
-      <small>{props.skills}</small>
+      <h1>{props.data.firstName}</h1>
+      <h2>{props.data.lastName}</h2>
+      <h3>{props.data.country}</h3>
+      <p>{props.data.title}</p>
+      <small>{props.data.skills}</small>
     </header>
   )
 }
@@ -43,6 +43,13 @@ const App = () => {
   let status = age >= 18
 
   let skills = ["java", "javascript", "html", "css", "react"]
+  const data = {
+    firstName: 'markgz',
+    lastName: 'yan',
+    title: "mobile manager",
+    country: "china",
+    skills: ['java', 'html', 'css']
+  }
 
   return (
     <div className='app'>
@@ -50,6 +57,7 @@ const App = () => {
       <Weight weight={gravity * mass} />
       <Status status={status} />
       <Skills skills={skills} />
+      <Header data={data} />
     </div>
   )
 }
