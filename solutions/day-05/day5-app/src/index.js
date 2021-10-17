@@ -20,6 +20,11 @@ const Weight = (props) => (
   <p>The weight of the object on earth is {props.weight} N.</p>
 )
 
+const Status = (props) => {
+  let status = props.status ? 'Old enough to drive' : 'Too young for driving'
+  return <p>{status}</p>
+}
+
 const App = () => {
   let currentYear = 2021
   let birthYear = 1990
@@ -27,10 +32,13 @@ const App = () => {
   const gravity = 9.81
   const mass = 75
 
+  let status = age >= 18
+
   return (
     <div className='app'>
       <Age age={age} />
       <Weight weight={gravity * mass} />
+      <Status status={status} />
     </div>
   )
 }
