@@ -62,6 +62,10 @@ const App = () => {
     alert('Hi')
   }
 
+  const greetPeople = () => {
+    alert('Welcome to 30 Days of React Challenge, 2021')
+  }
+
   return (
     <div className='app'>
       <Age age={age} />
@@ -69,7 +73,9 @@ const App = () => {
       <Status status={status} />
       <Skills skills={skills} />
       <Header data={data} />
-      <Button onClick={sayHi} text="CLICK ME" />
+      <Button onClick={() => alert('Hello')} text="CLICK ME" />
+      <Button onClick={greetPeople} text='Greet People' />
+      <Button onClick={() => alert(new Date())} text='Show Time' />
     </div>
   )
 }
