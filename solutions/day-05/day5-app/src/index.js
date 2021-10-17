@@ -25,6 +25,14 @@ const Status = (props) => {
   return <p>{status}</p>
 }
 
+const Skills = (props) => {
+  return (
+    <ul>
+      {props.skills.map((skill) => <li key={skill} >{skill}</li>)}
+    </ul>
+  )
+}
+
 const App = () => {
   let currentYear = 2021
   let birthYear = 1990
@@ -34,11 +42,14 @@ const App = () => {
 
   let status = age >= 18
 
+  let skills = ["java", "javascript", "html", "css", "react"]
+
   return (
     <div className='app'>
       <Age age={age} />
       <Weight weight={gravity * mass} />
       <Status status={status} />
+      <Skills skills={skills} />
     </div>
   )
 }
