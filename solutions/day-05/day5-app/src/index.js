@@ -33,6 +33,13 @@ const Skills = (props) => {
   )
 }
 
+const Button = (props) => {
+  return (
+    <button onClick={props.onClick}>{props.text}</button>
+  )
+}
+
+
 const App = () => {
   let currentYear = 2021
   let birthYear = 1990
@@ -51,6 +58,10 @@ const App = () => {
     skills: ['java', 'html', 'css']
   }
 
+  const sayHi = () => {
+    alert('Hi')
+  }
+
   return (
     <div className='app'>
       <Age age={age} />
@@ -58,6 +69,7 @@ const App = () => {
       <Status status={status} />
       <Skills skills={skills} />
       <Header data={data} />
+      <Button onClick={sayHi} text="CLICK ME" />
     </div>
   )
 }
