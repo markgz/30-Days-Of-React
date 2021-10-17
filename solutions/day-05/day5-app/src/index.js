@@ -14,10 +14,18 @@ const Header = (props) => {
 )
 }
 
-const App = () => (
-  <div>
-    <Header firstName="markgz" lastName="yan" country="china" title="mobile manager" skills="java, javascript, html, css" />
-  </div>
-)
+const App = () => {
+  const firstName = "markgz"
+  const lastName = "yan"
+  const country = "china"
+  const title = "mobile manager"
+  const skills = ["java", "javascript", "html", "css"]
+
+  return (
+    <div>
+      <Header firstName={firstName} lastName={lastName} country={country} title={title} skills={skills.join(" + ")} />
+    </div>
+  )
+}
 const root = document.getElementById('root')
 ReactDOM.render(<App />, root)
