@@ -26,13 +26,31 @@ const Skills = ({ skills }) => {
   return <ul>{skillsList}</ul>
 }
 
+const countries = [
+  {name: 'China', city: 'Shanghai'},
+  {name: 'Finland', city: "hexj"},
+  {name: 'USA', city: 'New York'},
+  {name: 'Braitain', city: 'London'}
+]
+
+const Country = ({country: { name, city }}) => {
+  const country = <li>country: {name} city: {city}</li>
+  return country
+}
+
+const Countries = ({ countries }) => {
+  const coutriesList = countries.map((country) => <Country country={country} />)
+  return coutriesList
+}
+
+
 const App = () => {
   const numbers = [1, 2, 3, 4, 5]
   return (
     <div className='container'>
       <div>
-        <h1>Skills Level</h1>
-        <Skills skills={skills} />
+        <h1>Countries List</h1>
+        <Countries countries={countries} />
       </div>
     </div>
   )
