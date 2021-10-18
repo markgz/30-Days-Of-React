@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 
 const Numbers = ({ numbers }) => {
-  const list = numbers.map((number) => <li>{number}</li>)
+  const list = numbers.map((number) => <li key={number}>{number}</li>)
   return list
 }
 
@@ -39,8 +39,8 @@ const Country = ({country: { name, city }}) => {
 }
 
 const Countries = ({ countries }) => {
-  const coutriesList = countries.map((country) => <Country country={country} />)
-  return coutriesList
+  const coutriesList = countries.map((country) => <Country key={country.name} country={country} />)
+  return <div>{coutriesList}</div>
 }
 
 
@@ -51,6 +51,10 @@ const App = () => {
       <div>
         <h1>Countries List</h1>
         <Countries countries={countries} />
+        <h2>Numbers List</h2>
+        <Numbers numbers={numbers} />
+        <h3>Skills List</h3>
+        <Skills skills={skills} />
       </div>
     </div>
   )
